@@ -1,0 +1,50 @@
+@startuml
+title Visitor Pattern - Sequence Diagram
+
+actor User
+participant "Main" as Main
+participant "Directory" as Directory
+participant "SourceCodeFile" as Source
+participant "SecurityAuditVisitor" as Visitor
+
+User -> Main : run()
+activate Main
+
+Main -> Directory : accept(visitor)
+activate Directory
+
+Directory -> Visitor : visit(directory)
+activate Visitor
+Visitor --> Directory : return
+deactivate Visitor
+
+Directory -> Source : accept(visitor)
+activate Source
+
+Source -> Visitor : visit(this)
+activate Visitor
+
+Visitor -> Source : hasHardcodedCredentials()
+Source --> Visitor : true
+
+Visitor -> Source : getName()
+Source --> Visitor : PaymentService.java
+
+Visitor --> Source : return
+deactivate Visitor
+
+Source --> Directory : return
+deactivate Source
+
+Directory --> Main : return
+deactivate Directory
+
+Main -> Visitor : printReport()
+activate Visitor
+Visitor --> Main : Security Score and Issues
+deactivate Visitor
+
+Main --> User : Display Results
+deactivate Main
+
+@enduml
