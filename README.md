@@ -79,6 +79,19 @@ All 14 tests passed during development.
 
 ## UML Diagrams
 
+### Class Diagram
+
+![Class Diagram](docs/class-diagram.png)
+
+[View PlantUML Source](docs/class-diagram.puml)
+
+### Sequence Diagram
+
+![Sequence Diagram](docs/sequence-diagram.png)
+
+[View PlantUML Source](docs/sequence-diagram.puml)
+
+
 - [Class Diagram](docs/class-diagram.puml)
 - [Sequence Diagram](docs/sequence-diagram.puml)
 
