@@ -154,3 +154,23 @@ We would need to:
 4. Update the demo and tests if the new element is used.
 
 This demonstrates the main limitation of the Visitor Pattern: adding new operations is easy, but adding new element types requires modifying the Visitor interface and its implementations.
+
+
+## Interactive Dashboard
+
+I also developed a simple interactive dashboard using HTML, CSS, and JavaScript.
+
+The dashboard displays inspection results from the Java application and includes a Code Inspection Simulator.
+
+Users can:
+- Compare Safe and Risky projects.
+- View security scores and quality results.
+- Change code complexity.
+- Simulate hardcoded credentials and vulnerable dependencies.
+- Run a simplified inspection and view detected issues.
+
+The simulator demonstrates selected inspection rules using JavaScript. The main Visitor Pattern implementation is written in Java.
+
+### Live Demo
+
+[Open Smart Code Inspector Dashboard](https://aruzhm.github.io/assignment-6-SDP/dashboard/)
