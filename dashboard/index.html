@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Code Inspector</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Smart Code Inspector</h1>
+        <p>Software Quality & Security Dashboard</p>
+    </header>
+
+    <main>
+        <section class="project-section">
+            <h2>Project Analysis</h2>
+            <p>Explore inspection results for a fintech project.</p>
+
+            <div class="buttons">
+                <button id="safeBtn" class="active">Safe Project</button>
+                <button id="riskyBtn">Risky Project</button>
+            </div>
+        </section>
+
+
+        <section class="simulator">
+            <h2>Code Inspection Simulator</h2>
+            <p>Customize the project and run a simple inspection.</p>
+
+            <div class="simulator-field">
+                <label>
+                    <input type="checkbox" id="hardcodedPassword">
+                    Hardcoded Password
+                </label>
+            </div>
+
+            <div class="simulator-field">
+                <label for="codeComplexity">Code Complexity:</label>
+                <input type="range" id="codeComplexity"
+                       min="1" max="20" value="6">
+                <span id="complexityValue">6</span>
+            </div>
+
+            <div class="simulator-field">
+                <label>
+                    <input type="checkbox" id="vulnerableDependencies">
+                    Vulnerable Dependencies
+                </label>
+            </div>
+
+            <button id="runInspectionBtn">Run Inspection</button>
+            <p id="inspectionMessage"></p>
+        </section>
+
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Security Score</h3>
+                <p id="securityScore">100/100</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Files</h3>
+                <p id="totalFiles">5</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Complexity</h3>
+                <p id="complexity">6.0</p>
+            </div>
+
+            <div class="card">
+                <h3>Technical Debt</h3>
+                <p id="technicalDebt">0</p>
+            </div>
+        </section>
+
+        <section class="results">
+            <h2>Inspection Results</h2>
+
+            <div class="result-item">
+                <span>Quality Gate</span>
+                <strong id="qualityGate">PASSED</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Compliance</span>
+                <strong id="compliance">COMPLIANT</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Test / Source Ratio</span>
+                <strong id="testRatio">0.5</strong>
+            </div>
+        </section>
+
+        <section class="issues">
+            <h2>Detected Issues</h2>
+            <ul id="issuesList">
+                <li>No issues found.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Smart Code Inspection Engine | Visitor Pattern | Java</p>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6fb;
+    color: #25283d;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    color: #6654c8;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #777;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 22px;
+    border: 2px solid #6654c8;
+    border-radius: 8px;
+    background: white;
+    color: #6654c8;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #eeeaff;
+}
+
+button.active {
+    background: #6654c8;
+    color: white;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #777;
+}
+
+.card p {
+    font-size: 27px;
+    font-weight: bold;
+    color: #6654c8;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.result-item strong {
+    color: #6654c8;
+}
+
+.issues ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.simulator {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.simulator-field {
+    margin: 18px 0;
+}
+
+.simulator input[type="checkbox"] {
+    accent-color: #6654c8;
+    margin-right: 8px;
+}
+
+.simulator input[type="range"] {
+    accent-color: #6654c8;
+    vertical-align: middle;
+    margin: 0 12px;
+}
+
+#runInspectionBtn {
+    background: #6654c8;
+    color: white;
+    margin-top: 10px;
+}
+
+#runInspectionBtn:hover {
+    background: #5140b5;
+}
+
+#inspectionMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
